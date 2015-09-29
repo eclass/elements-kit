@@ -75,12 +75,12 @@ gulp.task('vendor', function () {
 });
 
 // Images
-// gulp.task('images', function () {
-// 	src.images = SRC + '/images/**/*';
-// 	return gulp.src(src.images)
-// 		.pipe(gulp.dest(DEST + '/images'))
-// 		.pipe($.if(watch, reload({stream: true})));
-// });
+gulp.task('images', function () {
+	src.images = SRC + '/images/**/*';
+	return gulp.src(src.images)
+		.pipe(gulp.dest(DEST + '/images'))
+		.pipe($.if(watch, reload({stream: true})));
+});
 
 // Fonts
 gulp.task('fonts', function () {
@@ -162,7 +162,7 @@ gulp.task('default', ['serve']);
 
 // Build task
 gulp.task('build', ['clean'], function (cb) {
-	runSequence(['vendor', 'styles', 'scripts', 'jshint', 'images', 'templates', 'premailer'], cb);
+  runSequence(['vendor', 'styles', 'scripts', 'jshint', 'images', 'templates', 'premailer'], cb);
 });
 
 // Watch task

@@ -1,7 +1,7 @@
 {
   "name": "elements-kit",
   "repository": "https://github.com/eclass/elements-kit",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Víctor San Martín <victor@eclass.com>",
   "contributors": [],
   "scripts": {
