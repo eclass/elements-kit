@@ -1,0 +1,143 @@
+<p>Header</p>
+{{#each box-header}}
+<table class="{{this}}" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><img src="http://placehold.it/640x300" alt="Imagen" border="0" /></td>
+  </tr>
+  <tr>
+    <td>Feliciano de Silva, porque la claridad de su prosa y aquellas entricadas razones suyas le parecían de perlas, y más cuando llegaba a leer aquellos requiebros y cartas de desafíos.</td>
+  </tr>
+</table>
+{{/each}}
+
+<hr>
+<p>Cuadro verde destacado</p>
+{{#each box-highlight}}
+<div class="{{this}}">
+  Paleo hoodie jean shorts fixie, kitsch Thundercats forage VHS Carles four dollar toast. High Life irony paleo retro. Chillwave plaid sartorial you probably haven't heard of them Intelligentsia. Photo booth leggings banh mi, tofu mlkshk Pitchfork PBR&B. Tote bag hashtag Pinterest, YOLO vinyl Echo Park blog. American Apparel ennui before they sold out, cronut cold-pressed flexitarian dreamcatcher tofu cornhole tousled. Crucifix jean shorts pour-over readymade, chia Neutra asymmetrical narwhal XOXO 8-bit.
+</div>
+{{/each}}
+
+<hr>
+<p>Cuadro importante</p>
+{{#each box-important}}
+<table class="box-important {{radius}}" cellpadding="0" cellspacing="0">
+  <tr>
+    <td class="{{this.icon-color}}">
+      <i class="fa fa-{{this.icon}}"></i>
+    </td>
+    <td class="{{this.text-color}}">
+      Paleo hoodie jean shorts fixie, kitsch Thundercats forage VHS Carles four dollar toast. High Life
+      Paleo hoodie jean shorts fixie, kitsch Thundercats forage VHS Carles four dollar toast. High Life
+    </td>
+  </tr>
+</table>
+{{/each}}
+
+<hr>
+<p>Cuadro número / ticket</p>
+{{#each box-list}}
+<table class="{{this.class}}" cellpadding="0" cellspacing="0">
+  {{#if title}}
+    <tr class="title {{title-color}}">
+      <th colspan="2">{{title}}</th>
+    </tr>
+  {{/if}}
+  <tr>
+    <td>{{{this.icon}}}</td>
+    <td>Pero, con todo, alababa en su autor aquel acabar su libro con la promesa de aquella inacabable aventura, y muchas veces le vino deseo de tomar la pluma y dalle fin al pie de la letra.</td>
+  </tr>
+  <tr>
+    <td>{{{this.icon}}}</td>
+    <td>Pero, con todo, alababa en su autor aquel acabar su libro con la promesa de aquella inacabable aventura, y muchas veces le vino deseo de tomar la pluma y dalle fin al pie de la letra.</td>
+  </tr>
+</table>
+{{/each}}
+
+<hr>
+<p>Cuadro cita</p>
+{{#each box-quote}}
+<table class="{{this}}" cellpadding="0" cellspacing="0">
+  <tr>
+    <td rowspan="2">
+      <i class="fa fa-quote-left"></i>
+    </td>
+    <td>
+      Es, pues, de saber que este sobredicho hidalgo, los ratos que estaba ocioso, que eran los más del año, se daba a leer libros de caballerías, con tanta afición y gusto, que olvidó casi de todo punto el ejercicio de la caza, y aun la administración de su hacienda.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Don Quijote
+    </td>
+  </tr>
+</table>
+{{/each}}
+
+<hr>
+<p>Recuadro imagen</p>
+{{#each box-image}}
+<table class="{{this}}" cellpadding="0" cellspacing="0">
+  <tr>
+    <td style=""><img src="http://placehold.it/200x200" alt="Imagen" border="0"></td>
+    <td style="">
+      Con estas razones perdía el pobre caballero el juicio, y desvelábase por entenderlas y desentrañarles el sentido, que no se lo sacara ni las entendiera el mesmo Aristóteles, si resucitara para sólo ello. No estaba muy bien con las heridas que don Belianís daba y recebía, porque se imaginaba que, por grandes maestros que le hubiesen curado, no dejaría de tener el rostro y todo el cuerpo lleno de cicatrices y señales.
+    </td>
+  </tr>
+</table>
+{{/each}}
+
+<hr>
+<p>Subtítulo numerado</p>
+{{#each box-subtitle}}
+<div class="{{this}}">
+  <span>1</span>
+  Saber que este sobredicho hidalgo
+</div>
+{{/each}}
+
+<hr>
+<p>Recuadro definición / ejemplo / resumen</p>
+{{#each box-definition}}
+<div class="box-definition {{radius}}">
+  <div class="{{this.text-color}}">
+    <span class="{{this.icon-color}}"><i class="fa fa-{{this.icon}}"></i></span>
+    Definición
+  </div>
+  <div>
+    Con estas razones perdía el pobre caballero el juicio, y desvelábase por entenderlas y desentrañarles el sentido, que no se lo sacara ni las entendiera el mesmo Aristóteles, si resucitara para sólo ello. No estaba muy bien con las heridas que don Belianís daba y recebía, porque se imaginaba que, por grandes maestros que le hubiesen curado, no dejaría de tener el rostro y todo el cuerpo lleno de cicatrices y señales.
+  </div>
+</div>
+{{/each}}
+
+<hr>
+<p>Tablas</p>
+<table class="{{this.class}} box-table blue" cellpadding="0" cellspacing="0">
+  <thead>
+    <tr>
+      <th class="{{this.title-text-color}}">
+        <td>Texto</td>
+        <td>Texto</td>
+        <td>Texto</td>
+        <td>Texto</td>
+        <td>Texto</td>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="{{this.body-text-color}}">
+      <td>Texto</td>
+      <td>Texto</td>
+      <td>Texto</td>
+      <td>Texto</td>
+      <td>Texto</td>
+    </tr>
+    <tr class="{{this.body-text-color}}">
+      <td>Texto</td>
+      <td>Texto</td>
+      <td>Texto</td>
+      <td>Texto</td>
+      <td>Texto</td>
+    </tr>
+  </tbody>
+</table>

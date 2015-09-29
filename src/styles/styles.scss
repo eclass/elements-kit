@@ -1,0 +1,487 @@
+/* -------------------------------------
+    MIXINS
+------------------------------------- */
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+/* -------------------------------------
+    VARS
+------------------------------------- */
+$colors: (
+  white: #fff,
+
+  brown: #937963,
+  violet: #895881,
+
+  orange: #FBA100,
+  orange-light: #FCCE8C,
+  darkorange: #D97223,
+  darkorange-light: #EC8C00,
+
+  green: #1BA753,
+  green-light: #e2f5e0,
+  green-water: #6EBF61,
+  green-water-light: #80C9A3,
+
+  blue: #0071b5,
+  blue-light: #c8eaf5,
+  blue-water: #63CAC8,
+  blue-water-light: #98DCDA,
+  darkblue: #004F78,
+  darkblue-light: #0075B2,
+
+  red: #D92931,
+  red-light: #FAE1E1,
+  gray: #808285,
+  gray-light: #e6e7e8,
+);
+
+/* -------------------------------------
+    GLOBAL
+------------------------------------- */
+body {
+  font: 14px Arial;
+}
+img {
+  display: block;
+}
+
+/* -------------------------------------
+    ELEMENTS
+------------------------------------- */
+div {
+  &.box-highlight {
+    margin: 10px auto;
+    min-height: 60px;
+    width: 560px;
+    padding: 20px;
+    line-height: 16px;
+
+    @each $name, $color in $colors {
+      &.#{$name} {
+        background-color: #{$color};
+      }
+      &.text-#{$name} {
+        color: #{$color};
+      }
+    }
+
+    &.radius {
+      @include border-radius(10px);
+    }
+  }
+
+  &.box-subtitle {
+    height: 20px;
+    background-color: #e6e7e8;
+    padding: 10px 10px 10px 60px;
+    font-weight: bold;
+    font-size: 16px;
+    width: 640px;
+    position: relative;
+    margin: 10px auto;
+
+    span {
+      position: absolute;
+      font-size: 30px;
+      left: 0;
+      top: 0;
+      width: 40px;
+      height: 30px;
+      text-align: center;
+      color: #fff;
+      padding: 5px 0
+    }
+
+    @each $name, $color in $colors {
+      &.#{$name} {
+        span {
+          background-color: #{$color};
+        }
+      }
+      &.text-#{$name} {
+        span {
+          color: #{$color};
+        }
+      }
+    }
+
+    &.radius {
+      @include border-radius(6px);
+      overflow: hidden;
+    }
+  }
+
+  &.box-definition {
+    background-color: map-get($colors, gray-light);
+    width: 640px;
+    margin: 10px auto;
+
+    div:first-child {
+      height: 20px;
+      padding: 20px 10px 10px 70px;
+      font-weight: bold;
+      font-size: 16px;
+      position: relative;
+
+      span {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50px;
+        text-align: center;
+        height: 40px;
+        padding: 10px 0 0 0;
+
+        i {
+          font-size: 30px!important;
+        }
+      }
+
+      @each $name, $color in $colors {
+        &.#{$name} {
+          background-color: #{$color};
+        }
+        &.text-#{$name} {
+          color: #{$color};
+        }
+
+        span {
+          &.#{$name} {
+            background-color: #{$color};
+          }
+          &.text-#{$name} {
+            color: #{$color};
+          }
+        }
+      }
+    }
+
+    div:last-child {
+      padding: 20px 20px 20px 20px;
+    }
+
+    &.radius {
+      @include border-radius(10px);
+      overflow: hidden;
+    }
+  }
+}
+
+table {
+  &.box-header {
+    border: 0;
+    padding: 0;
+    margin: 10px auto;
+    width: 640px;
+
+    tr,
+    td {
+      padding: 0;
+      margin: 0;
+    }
+
+    tr:last-child {
+      color: map-get($colors, white);
+      td {
+        padding: 10px 20px;
+      }
+    }
+
+    @each $name, $color in $colors {
+      &.#{$name} {
+        tr:last-child {
+          background-color: #{$color};
+        }
+      }
+      &.text-#{$name} {
+        tr:last-child {
+          color: #{$color};
+        }
+      }
+    }
+
+    &.radius {
+      @include border-radius(0 0 5px 5px);
+      overflow: hidden;
+    }
+  }
+
+  &.box-important {
+    border: 0;
+    padding: 0;
+    margin: 10px auto;
+    width: 600px;
+
+    td {
+      border: 0;
+      padding: 20px;
+      vertical-align: top;
+
+      &:first-child {
+        text-align: center;
+        width: 60px;
+
+        i {
+          font-size: 50px;
+        }
+
+        @each $name, $color in $colors {
+          &.#{$name} {
+            background-color: #{$color};
+          }
+          &.text-#{$name} {
+            color: #{$color};
+          }
+        }
+      }
+
+      &:last-child {
+        min-height: 60px;
+        width: 460px;
+        line-height: 16px;
+
+        @each $name, $color in $colors {
+          &.#{$name} {
+            background-color: #{$color};
+          }
+          &.text-#{$name} {
+            color: #{$color};
+          }
+        }
+      }
+    }
+
+    &.radius {
+      @include border-radius(10px);
+      overflow: hidden;
+    }
+  }
+
+  &.box-list {
+    border: 0;
+    padding: 0;
+    margin: 10px auto;
+    width: 600px;
+    background-color: #e6e7e8;
+    color: #808285;
+    line-height: 16px;
+
+    td {
+      vertical-align: top;
+      padding-botom: 10px;
+    }
+    th {
+      text-align: left;
+      font-weight: 800;
+    }
+
+    &.with-number {
+      td {
+        &:first-child {
+          padding: 10px 20px;
+          font-size: 14px;
+          color: map-get($colors, white);
+
+          span {
+            @include border-radius(10px);
+            padding: 2px 6px;
+          }
+        }
+        &:last-child {
+          padding: 5px 5px 10px 0;
+        }
+      }
+    }
+
+    &.with-fa-icon {
+      td {
+        &:first-child {
+           padding: 10px 20px;
+           i {
+            font-size: 24px;
+           }
+        }
+        &:last-child {
+          padding: 10px 10px 10px 0;
+        }
+      }
+    }
+
+    @each $name, $color in $colors {
+      tr.text-#{$name} {
+        color: #{$color};
+      }
+
+      &.#{$name} {
+        border-top: 5px #{$color} solid;
+
+        tr.title {
+          background-color: #{$color};
+          th {
+            padding: 5px 10px;
+          }
+        }
+
+        &.with-fa-icon {
+          td {
+            &:first-child {
+              color: #{$color};
+            }
+          }
+        }
+
+        &.with-number {
+          td {
+            &:first-child {
+              span {
+                background-color: #{$color};
+              }
+
+            }
+          }
+        }
+      }
+    }
+
+    &.radius {
+      @include border-radius(10px);
+      border-top: 0;
+
+      &.with-fa-icon {
+        td {
+          &:first-child {
+             padding: 10px 10px;
+             i {
+              font-size: 20px;
+             }
+          }
+          &:last-child {
+            padding: 5px 5px 5px 0;
+          }
+        }
+      }
+
+      &.with-number {
+        td {
+          &:first-child {
+             padding: 10px 10px;
+          }
+          &:last-child {
+            padding: 5px 5px 5px 0;
+          }
+        }
+      }
+    }
+  }
+
+  &.box-quote {
+    border: 0;
+    padding: 0;
+    margin: 10px auto;
+    width: 600px;
+
+    @each $name, $color in $colors {
+      &.#{$name} {
+        background-color: #{$color};
+      }
+    }
+
+    @each $name, $color in $colors {
+      &.text-#{$name} {
+        color: #{$color};
+      }
+    }
+
+    td {
+      border: 0;
+      vertical-align: top;
+    }
+
+    tr:first-child {
+      td {
+        &:first-child {
+          text-align: center;
+          padding: 20px;
+          width: 60px;
+          height: 100px;
+
+          i {
+            font-size: 60px;
+          }
+        }
+        &:last-child {
+          min-height: 60px;
+          padding: 20px 20px 0 20px;
+          width: 460px;
+        }
+      }
+    }
+    tr:last-child {
+      td {
+        min-height: 60px;
+        padding: 5px 20px 10px 20px;
+        width: 460px;
+        text-align: right;
+        font-style: italic;
+      }
+    }
+  }
+
+  &.box-image {
+    border: 0;
+    padding: 0;
+    margin: 10px auto;
+    width: 600px;
+
+    @each $name, $color in $colors {
+      &.#{$name} {
+        background-color: #{$color};
+      }
+    }
+
+    @each $name, $color in $colors {
+      &.text-#{$name} {
+        color: #{$color};
+      }
+    }
+
+    td {
+      padding: 0;
+      margin: 0;
+
+      &:first-child {
+        vertical-align: top;
+      }
+      &:last-child {
+        padding: 20px
+      }
+    }
+  }
+
+  &.box-table {
+    border: 0;
+    padding: 0;
+    margin: 10px auto;
+    width: 600px;
+
+    @each $name, $color in $colors {
+      &.#{$name} {
+        thead {
+          tr {
+            background-color: #{$color};
+          }
+        }
+      }
+    }
+
+    td {
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
