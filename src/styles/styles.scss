@@ -11,31 +11,35 @@
 /* -------------------------------------
     VARS
 ------------------------------------- */
+$namespace: 'eclass-element';
+
 $colors: (
   white: #fff,
 
   brown: #937963,
   violet: #895881,
 
-  orange: #FBA100,
-  orange-light: #FCCE8C,
-  darkorange: #D97223,
-  darkorange-light: #EC8C00,
+  orange: #EC8C00,
+  orange-light: #FBA100,
+  orange-lighter: #FCCE8C,
+  orange-dark: #D97223,
 
   green: #1BA753,
   green-light: #e2f5e0,
-  green-water: #6EBF61,
-  green-water-light: #80C9A3,
+  green-lighter: #6EBF61,
+  green-alt: #80C9A3,
 
   blue: #0071b5,
-  blue-light: #c8eaf5,
-  blue-water: #63CAC8,
-  blue-water-light: #98DCDA,
-  darkblue: #004F78,
-  darkblue-light: #0075B2,
+  blue-light: #0075B2,
+  blue-lighter: #c8eaf5,
+  blue-dark: #004F78,
+
+  turquoise: #63CAC8,
+  turquoise-light: #98DCDA,
 
   red: #D92931,
   red-light: #FAE1E1,
+
   gray: #808285,
   gray-light: #e6e7e8,
 );
@@ -54,7 +58,7 @@ img {
     ELEMENTS
 ------------------------------------- */
 div {
-  &.box-highlight {
+  &.#{$namespace}-box-highlight {
     margin: 10px auto;
     min-height: 60px;
     width: 560px;
@@ -75,7 +79,7 @@ div {
     }
   }
 
-  &.box-subtitle {
+  &.#{$namespace}-box-subtitle {
     height: 20px;
     background-color: #e6e7e8;
     padding: 10px 10px 10px 60px;
@@ -116,7 +120,7 @@ div {
     }
   }
 
-  &.box-definition {
+  &.#{$namespace}-box-definition {
     background-color: map-get($colors, gray-light);
     width: 640px;
     margin: 10px auto;
@@ -173,7 +177,7 @@ div {
 }
 
 table {
-  &.box-header {
+  &.#{$namespace}-box-header {
     border: 0;
     padding: 0;
     margin: 10px auto;
@@ -211,7 +215,7 @@ table {
     }
   }
 
-  &.box-important {
+  &.#{$namespace}-box-important {
     border: 0;
     padding: 0;
     margin: 10px auto;
@@ -262,7 +266,7 @@ table {
     }
   }
 
-  &.box-list {
+  &.#{$namespace}-box-list {
     border: 0;
     padding: 0;
     margin: 10px auto;
@@ -379,7 +383,7 @@ table {
     }
   }
 
-  &.box-quote {
+  &.#{$namespace}-box-quote {
     border: 0;
     padding: 0;
     margin: 10px auto;
@@ -432,7 +436,7 @@ table {
     }
   }
 
-  &.box-image {
+  &.#{$namespace}-box-image {
     border: 0;
     padding: 0;
     margin: 10px auto;
@@ -463,7 +467,7 @@ table {
     }
   }
 
-  &.box-table {
+  &.#{$namespace}-box-table {
     border: 0;
     padding: 0;
     margin: 10px auto;

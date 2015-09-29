@@ -13,5 +13,5 @@ Elementos sencillos en HTML para implementar en los artículos.
 
 ## Tareas
 
-* Normalizar los nombres de los colores
-* Ordenar ```.gulpfile.js``` y quitar código comentado
+* [x] Normalizar los nombres de los colores
+* [ ] Ordenar ```.gulpfile.js``` y quitar código comentado
