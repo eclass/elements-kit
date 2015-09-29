@@ -8,6 +8,7 @@ Elementos sencillos en HTML para implementar en los artículos.
 * Instalar dependencias: ```npm install```
 * Iniciar ambiente de desarrollo: ```gulp```
 * Ir a: http://127.0.0.1:3000
+* Ir a: http://127.0.0.1:3000/out para ver versión ```css inline```
 * Para distribuir a ambiente de producción: ```gulp --dist```
 
 ## Tareas
