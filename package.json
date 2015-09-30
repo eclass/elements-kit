@@ -39,5 +39,7 @@
     "minimist": "^1.1.1",
     "run-sequence": "^1.1.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "gulp-htmlsplit": "^1.1.0"
+  }
 }
